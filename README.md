@@ -18,7 +18,7 @@ An oh-my-zsh theme;
 
 #### Install
 
-1. clone repo: ```git clone [https://github.com/ChesterYue/ohmyzsh-theme-passion](https://github.com/lsiddd/ohmyzsh-theme-passion.git)```;
+1. clone repo: ```git clone https://github.com/lsiddd/ohmyzsh-theme-passion.git```;
 2. copy theme: ```cp ./ohmyzsh-theme-passion/passion.zsh-theme ~/.oh-my-zsh/themes/passion.zsh-theme```;
 3. modify rc: open ```~/.zshrc``` find ```ZSH_THEME``` edit to ```ZSH_THEME="passion"```;
 4. execute rc: ```source ~/.zshrc```;
