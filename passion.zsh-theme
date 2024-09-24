@@ -23,7 +23,6 @@ function real_time() {
 }
 
 
-# login_info
 function login_info() {
     local color="%{$fg_no_bold[cyan]%}";                    # color in PROMPT need format in %{XXX%} which is not same with echo
     local ip
@@ -45,9 +44,13 @@ function login_info() {
         # Unknown.
     fi
     local color_reset="%{$reset_color%}";
-    echo "${color}[%n@${ip}]${color_reset}";
+    # echo "${color}[%n@${ip}]${color_reset}";
+    
+    local color="%{$fg_no_bold[cyan]%}";  # color for username@hostname
+    local user_host="[%n@%m]";  # %n is the username, %m is the hostname
+    local color_reset="%{$reset_color%}";
+    echo "${color}${user_host}${color_reset}";
 }
-
 
 # directory
 function directory() {
@@ -211,4 +214,4 @@ TRAPALRM() { # cspell:disable-line
 
 # prompt
 # PROMPT='$(real_time) $(login_info) $(directory) $(git_status)$(command_status) ';
-PROMPT='$(real_time) $(directory) $(git_status)$(command_status) ';
+PROMPT='$(real_time) $(login_info) $(directory) $(git_status)$(command_status) ';
